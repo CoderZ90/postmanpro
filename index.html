@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/style.css">
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<title>Postman PRO | Better Than Postman</title>
+</head>
+
+<body class="bg-gray-900">
+	<header class="text-gray-400 bg-gray-900 body-font mt-1">
+		<div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+			<a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+					stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+					viewBox="0 0 24 24">
+					<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+				</svg>
+				<span class="ml-3 text-xl">Postman PRO</span>
+			</a>
+			<nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+				<a href="index.html" class="mr-10 hover:text-white">Home</a>
+				<a class="mr-10 hover:text-white">About</a>
+				<a class="mr-10 hover:text-white">Services</a>
+				<a class="mr-10 hover:text-white">Contact</a>
+			</nav>
+			<button
+				class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Button
+				<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+					class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+					<path d="M5 12h14M12 5l7 7-7 7"></path>
+				</svg>
+			</button>
+		</div>
+	</header>
+
+	<div class="container">
+		<h2 class="title mt-20"><span>Postman Pro</span> Better Than Postman</h2>
+		<!-- ======= Url Box ======= -->
+		<div class="p-2 w-1/2 ml-16 mt-10">
+			<div class="relative">
+				<label for="url" class="leading-7 text-lg text-gray-200">Paste URL</label>
+				<input type="text" id="url" name="name"
+					class="w-full bg-gray-600 bg-opacity-40 rounded border border-gray-600 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+					autocomplete="off" placeholder="Paste Your URL...">
+			</div>
+		</div>
+		<!-- ==== Request Types ==== -->
+		<div class="radioBox ml-16 mt-10 text-gray-400 p-2">
+			<legend class="text-2xl text-white font-medium mb-2">Request Type</legend>
+			<div class="form-check pt-2">
+				<input class="form-check-input" type="radio" name="requestType" id="get" value="GET" checked>
+				<label class="ml-1 form-check-label" for="get">
+					GET
+				</label>
+			</div>
+			<div class="form-check pt-2">
+				<input class="form-check-input mt-2" type="radio" name="requestType" id="post" value="POST">
+				<label class="ml-1 form-check-label" for="post">
+					POST
+				</label>
+			</div>
+		</div>
+		<!-- ===== Content Types =====  -->
+		<div class="radioBox ml-16 mt-10 text-gray-400 p-2">
+			<legend class="text-2xl text-white font-medium mb-2">Content Type</legend>
+			<div class="form-check pt-2">
+				<input class="form-check-input" type="radio" name="contentType" id="jsonRadio" value="json" checked>
+				<label class="ml-1 form-check-label" for="get">
+					JSON
+				</label>
+			</div>
+			<div class="form-check pt-2">
+				<input class="form-check-input mt-2" type="radio" name="contentType" id="paramsRadio" value="params">
+				<label class="ml-1 form-check-label" for="params">
+					Custom Parameters
+				</label>
+			</div>
+		</div>
+		<!-- ===== Parameter Box - Hides on Clicking Json Option =====  -->
+		<div id="parametersBox">
+			<legend class="ml-16 p-2 mt-10 text-2xl text-white font-medium mb-2">Parameters</legend>
+			<div class="flex flex-wrap ml-16">
+				<div class="p-2 w-1/2">
+					<div class="relative">
+						<label for="parameterKey1" class="leading-7 text-md text-gray-400">Parameter One</label>
+						<input type="text" id="parameterKey1" name="parameterKey1"
+							class="w-full bg-gray-600 bg-opacity-40 rounded border border-gray-600 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-10 transition-colors duration-200 ease-in-out"
+							placeholder="Enter Parameter One Key" autocomplete="off">
+					</div>
+				</div>
+				<div class="p-2 w-1/2">
+					<div class="relative">
+						<label for="parameterValue1" class="leading-7 text-md text-gray-400">Parameter One Value</label>
+						<input type="text" id="parameterValue1" name="email"
+							class="w-full bg-gray-600 bg-opacity-40 rounded border border-gray-600 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-10 transition-colors duration-200 ease-in-out"
+							placeholder="Enter Parameter One Value" autocomplete="off">
+					</div>
+				</div>
+				<div class="addBtnContainer">
+					<button id="addParam" class="addBtn rounded">Add More</button>
+				</div>
+			</div>	
+			<!-- params adder -->
+			<div id="params"></div>
+		</div>
+		<!-- =========== JSON BOX - Hides On Clicking Param Option =========== -->
+		<div class="relative mb-4 ml-16 p-2 mt-10" id="requestJsonBox">
+			<label for="jsonBox" class="leading-7 text-2xl text-gray-100">Paste Your Request</label>
+			<textarea id="requestJsonText" name="requestJsonText"
+				class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out mt-4"></textarea>
+		</div>
+		<!-- ===== Submit Button - Fetch API ===== -->
+		<div class="submitBox">
+			<button id="submit"
+				class="ml-16 text-white bg-indigo-500 border-0 py-4 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Submit Response</button>
+		</div>
+		<!-- =========== Request Output =========== -->
+		<div class="relative mb-4 ml-16 p-2 mt-10" id="responseJsonBox">
+			<label for="jsonBox" class="leading-7 text-2xl text-gray-100">Response</label>
+			<textarea id="responseJsonText" name="responseJsonText"
+				class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-52 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out mt-4"
+				placeholder="Your Response Will Appear Here"></textarea>
+		</div>
+	</div>
+
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

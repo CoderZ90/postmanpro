@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins';
+}
+.title {
+	background: linear-gradient(to right, rgb(199, 210, 254), rgb(254, 202, 202), rgb(254, 243, 199));
+	color: transparent;
+	-webkit-background-clip: text;
+	font-weight: 600;
+	font-size: 35px;
+	margin-left: 4.2rem;
+}
+nav a {
+	cursor: pointer;
+}
+#url {
+	margin-top: 15px;
+	font-family: "Space Mono";
+}
+.addBtn {
+	margin-left: 15px;
+	padding: 12px 30px;
+	background: #4b5563;
+	border: 1px solid #5d6979;
+	color: #fff;
+	font-weight: 500;
+}
+.submitBox {
+	display: flex;
+	justify-content: center;
+}
+.addBtnContainer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.addBtnContainer button {
+	width: 95%;
+	margin-left: -14px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#submit {
+	width: 100%;
+	margin-top: 10px;
+}
+#responseJsonText {
+	font-family: 'Space Mono';
+}
